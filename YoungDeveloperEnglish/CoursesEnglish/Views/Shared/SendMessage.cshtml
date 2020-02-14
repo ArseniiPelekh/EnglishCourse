@@ -1,0 +1,16 @@
+﻿@model YoungDeveloperEnglish.ViewModels.SendMessageModel
+
+<form class="caption-block-data" asp-action="SendEmail" asp-controller="SendEmail" method="POST">
+    <h1 class="h3 mb-3 font-weight-normal">Реєстрація на пробне заняття</h1>
+    <label for="inputName" class="sr-only">Name</label>
+    <input asp-for="Name" type="text" id="inputName" class="form-control" placeholder="Імя">
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input asp-for="Email" type="email" id="inputEmail" class="form-control" placeholder="Електронна пошта" >
+    <label for="inputNumber" class="sr-only">Number</label>
+    <input asp-for="PhoneNumber" type="tel" id="inputNumber" class="form-control" placeholder="Телефон" >
+
+    <input asp-for="TypeForm" class="form-control" value="@ViewData["Title"]" style="display: none"/>
+
+    <input class="btn btn-lg btn btn-secondary btn-block" type="submit" value="Зареєструватися" />
+    <p class="mt-2 mb-3 ">© A V A</p>
+</form>

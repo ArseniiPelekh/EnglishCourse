@@ -1,0 +1,56 @@
+﻿@model ChangeArticleModel
+
+@{
+    Layout = "_LayoutAdmin";
+    ViewData["Title"] = "ChangeArticle";
+}
+
+@{
+    foreach (Article article in Model.Articles)
+    {
+    <div class="border rounded p-3 mb-4 form-article">
+        <form asp-action="ChangeArticle" asp-controller="ArticleCongiuntivo">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group" style="display: none">
+                <input asp-for="@article.Id" class="form-control" />
+                <input asp-for="@article.DateTime" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="@article.TextHtml" va>Html текс</label>
+                <textarea asp-for="@article.TextHtml" class="form-control" rows="3">@article.TextHtml</textarea>
+                <span asp-validation-for="@article.TextHtml" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+
+                <label asp-for="@article.FKArticleType">Виберіть тип статті</label>
+                <select asp-for="@article.FKArticleType" class="form-control">
+                    @foreach (var type in Model.ArticleTypes)
+                    {
+                        <option value=@type.Id>@type.Name</option>
+                    }
+                </select>
+                <span asp-validation-for="@article.FKArticleType" class="text-danger"></span>
+
+            </div>
+
+            <div class="text-right mt-3">
+                <label>Дата створення: <b>@article.DateTime</b></label>
+                <br />
+                <input class="btn btn-light" type="submit" value="Сохранити">
+            </div>
+        </form>
+        <form asp-action="DeleteArticle" asp-controller="ArticleCongiuntivo">
+
+            <div class="form-group" style="display: none">
+                
+                <input name="articleId" asp-for=@article.Id class="form-control" />
+
+            </div>
+
+            <input class="btn btn-light" type="submit" value="Удалити">
+        </form>
+    </div>
+    }
+}

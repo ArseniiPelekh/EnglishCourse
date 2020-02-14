@@ -1,0 +1,14 @@
+﻿{
+  "AppIdentitySettings": {
+    "UserEmail": {
+      "FromEamil": "a.pelekhwork@gmail.com",
+      "Password": "********",
+      "ToEmail": "a.pelekh72@gmail.com"
+    },
+
+    "SettingEmail": {
+      "Host": "smtp.gmail.com",
+      "Port": 587
+    }
+  }
+}

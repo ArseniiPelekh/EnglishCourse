@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="~/css/main.css" rel="stylesheet">
+    <link href="~/css/carousel.css" rel="stylesheet">
+    <link href="~/css/signin.css" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <!-- Header -->
+
+        <nav class="navbar navbar-expand-xl navbar-dark bg-dark">
+            <a class="navbar-brand" href="/Home/Index">
+                <img src="~/png/LogImgAdmin.png" width="25" height="25" />
+                YoungDeveloperEnglish
+            </a>
+            <a class="navbar-brand" href="/"></a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar-collapse collapse" id="main-nav">
+                <ul class="nav navbar-nav ml-xl-5">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/Home/Index">Головна</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Course/CourseForChildren">Курси для дітей</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Course/CourseForAdults">Курси для дорослих</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown1" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Розмовний клуб</a>
+                        <ul class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown1">
+                            <li class="nav-item dropdown-item bg-dark">
+                                <a class="nav-link" href="/ListClub/1">Для дорослих</a>
+                            </li>
+                            <li class="nav-item dropdown-item bg-dark">
+                                <a class="nav-link" href="/ListClub/2">Для дітей</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/bootlint/">Цена</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/Admin/Login">Контакти</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item">
+
+                        <a class="nav-link" href="https://www.facebook.com/YoungDeveloperEnglishCourses/?__tn__=%2Cd%3C-R&eid=ARDpTtEnwFeiebJczdwTU2pptfWMqsClBZlufzWHYE__vNTCyyu-WTDZD3G_D34Tvj4XzuhfLun9m2dM" rel="nofollow">Facebook</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/jobs/" rel="nofollow">Instagram</a>
+                    </li>
+                    <!--
+                <li class="nav-item dropdown">
+                    <a class="nav-dropdown nav-link dropdown-toggle" id="navbarDropdownRight" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Роз клуб </a>
+                    <ul class="dropdown-menu dropdown-menu-right bg-dark" aria-labelledby="navbarDropdownRight">
+                        <li class="dropdown-item bg-dark">
+                            <a class="nav-link" href="https://github.com/MaxCDN/bootstrapcdn" data-ga-category="Navigation" data-ga-action="Resources" data-ga-label="GitHub project" rel="noopener nofollow" target="_blank">для дорослих</a>
+                        </li>
+                        <li class="dropdown-item bg-dark">
+                            <a class="nav-link" href="https://opencollective.com/getbootstrapcdn" data-ga-category="Navigation" data-ga-action="Resources" data-ga-label="OpenCollective" rel="noopener" target="_blank">для дітей</a>
+                        </li>
+                    </ul>
+                </li>
+                -->
+                </ul>
+            </div>
+        </nav>
+
+        <!-- /Header -->
+    </header>
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+
+
+    <footer class="border-top footer text-muted">
+
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

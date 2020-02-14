@@ -1,0 +1,26 @@
+﻿@model ClubListModel
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<div class="container marketing">
+    <div class="row featurette">
+        <div class="col-md-8 heading-about mt-4">
+            @{
+                foreach (Article cour in Model.Articles)
+                {
+                    @Html.Raw(@WebUtility.HtmlDecode(cour.TextHtml));
+                }
+            }
+        </div>
+
+        <div class="col-md-4 float-right" style="position: sticky;">
+            <!-- Massage --> 
+
+            @Html.Partial("SendMessage", Model.SendMassageModel);
+            
+            <!-- /Massage -->
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,80 @@
+﻿@model YoungDeveloperEnglish.ViewModels.SendMessageModel
+
+@{
+
+    ViewData["Title"] = "Курси для дорослих";
+}
+
+    <div class="container marketing">
+        <nav>
+            <div class="nav nav-tabs mt-2" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active btn btn-secondary btn-lg " id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Про заняття</a>
+                <a class="nav-item nav-link btn btn-secondary btn-lg btn-lg" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Розклад</a>
+            </div>
+        </nav>
+
+        <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                <div class="center">
+                    <div class="row featurette">
+                        <div class="col-md-8 heading-about mt-4">
+                            <h2 class="h1">Курси для дорослих. <span class="text-muted">Красивый текст.</span></h2>
+                            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+
+                            <div class="">
+                                <img class=" img-fluid mx-auto d-block" data-src="holder.js/500x500/auto" alt="500x500" src="~/jpg/class2.jpg" data-holder-rendered="true" style="width: 400px; height: 400px;">
+                            </div>
+
+                            <br />
+                            <h2>Нормальные учинеки. <span class="text-muted">Красивый текст.</span></h2>
+                            <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe width="600" height="337" src="https://www.youtube.com/embed/cRbciSAvI9g" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+
+                            <h2>Ева Тимуш. "Je T'aime"</h2>
+                            <p class="lead">Слепые прослушивания - Голос Дети - Сезон 3</p>
+
+                        </div>
+
+                        <div class="col-md-4 float-right" style="position: sticky;">
+                            <!-- Massage -->
+
+                            @Html.Partial("SendMessage", Model)
+
+                            <!-- /Massage -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                <div class="row featurette">
+                    <div class="col-md-7 order-md-2">
+                        <h2 class="featurette-heading">Мелкая школота. <span class="text-muted">Красивый текст.</span></h2>
+                        <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+                    </div>
+                    <div class="col-md-5 order-md-1">
+                        <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500" src="~/jpg/class2.jpg" data-holder-rendered="true" style="width: 500px; height: 500px;">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--
+
+
+    <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Contact</a>
+        </li>
+      </ul>
+    -->

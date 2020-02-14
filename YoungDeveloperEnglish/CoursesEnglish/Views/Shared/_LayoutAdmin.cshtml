@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <link href="~/css/main.css" rel="stylesheet">
+    <link href="~/css/carousel.css" rel="stylesheet">
+    <link href="~/css/signin.css" rel="stylesheet">
+    <link href="~/css/admin.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/jquery-ajax-unobtrusive@3.2.6/dist/jquery.unobtrusive-ajax.min.js">
+    <link href="https://cdn.jsdelivr.net/npm">
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="text-center ">
+
+            <h1 class="h3 mt-4 font-weight-normal"><img class="mb-4" src="~/png/LogImgAdmin.png" width="72" height="72">  Панель адміністратора</h1>
+
+        </div>
+        <div class="row" >
+            <div class="col-2 pl-0 pr-0">
+
+                <div class="col-left pt-4 pb-4 pl-3 pr-3 rounded" style="background-color: darkgray">
+
+                    <a asp-controller="ArticleCongiuntivo" asp-action="AddNewArticle" class="btn btn-secondary btn-block " role="button" aria-pressed="true">Добавити статтю</a>
+                    <a asp-controller="ArticleCongiuntivo" asp-action="ShowAllArticle" class="btn btn-secondary btn-block" role="button" aria-pressed="true">Подивитися статті</a>
+                    <a asp-controller="ArticleCongiuntivo" asp-action="ChangeArticle" class="btn btn-secondary btn-block" role="button" aria-pressed="true">Редагувати статтю</a>
+                    <a asp-controller="Admin" asp-action="Register" class="btn btn-secondary btn-block" role="button" aria-pressed="true">Регістрація нового адміна</a>
+                    <a asp-controller="SendEmail" asp-action="ShowAllPersonRequest" class="btn btn-secondary btn-block" role="button" aria-pressed="true">Переглянути заявки</a>
+                    <a asp-controller="Home" asp-action="Index" class="btn btn-secondary btn-block" role="button" aria-pressed="true">Повернутися на сайт</a>
+                
+                </div>
+            
+            </div>
+            <div class="col-10">
+                <!-- Main -->
+
+                @RenderBody()
+
+                <!-- /Main -->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+
+    <script src="~/lib/jquery//dist/jquery.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <!-- /Scripts -->
+</body>
+</html>

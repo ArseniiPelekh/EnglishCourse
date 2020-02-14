@@ -1,0 +1,31 @@
+﻿@model Data.Models.Article
+
+
+<form asp-action="ChangeArticle" asp-controller="ArticleCongiuntivo">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+    <input asp-for="TextHtml" class="form-control" rows="3" value=@Model.TextHtml  />
+
+    <div class="form-group">
+        <label asp-for="TextHtml">Html текс</label>
+        <textarea asp-for="TextHtml" class="form-control" rows="3">@Model.TextHtml</textarea>
+        <span asp-validation-for="TextHtml" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+
+        <label asp-for="@Model.ArticleType">Виберіть тип статті</label>
+        <select asp-for="@Model.ArticleType" class="form-control" id="exampleFormControlSelect1">
+            <option value="2" >Клуб для взрослих</option>
+            <option value="1" >Клуб для детей</option>
+        </select>
+        <span asp-validation-for="@Model.ArticleType" class="text-danger"></span>
+    </div>
+
+    <div class="text-right mt-3">
+        <label>Дата створення: <b>@Model.DateTime.Date</b></label>
+        <br />
+        <input class="btn btn-light" type="submit" value="Сохранити">
+        <input class="btn btn-light" type="submit" value="Удалити">
+    </div>
+</form>

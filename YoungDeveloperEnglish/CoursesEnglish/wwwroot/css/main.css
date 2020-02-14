@@ -1,0 +1,37 @@
+.carouselSlide {
+    background-color: seagreen;
+}
+
+img#carouselImg {
+    text-align: center;
+    width: 520px;
+    height: 381px;
+}
+
+.caption-block-data {
+    margin-top: 10%;
+    height: 27rem;
+  }
+  
+  .caption-block-data input{
+    margin-top: 1rem;
+  }
+  .caption-block-data h1{
+    margin-top: 1rem;
+  }
+
+/* Google maps in index.html*/ 
+  .map-container{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+    
+}
+    .map-container iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
